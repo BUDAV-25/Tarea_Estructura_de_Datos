@@ -4,55 +4,54 @@
     {
         static void Main(string[] args)
         {
-            // Cantidad de registros (simulamos una base de datos grande)
-            int cantidadClientes = 1500;
+            // En este ejercicio simulamos una búsqueda externa, es decir,
+            // cuando los datos están almacenados fuera de la memoria principal (por ejemplo, en disco).
+            // Para simular esto, generamos un arreglo con muchas cédulas (1000+).
 
-            // Creamos un arreglo con las "cédulas" de los clientes
-            int[] cedulas = new int[cantidadClientes];
+            string[] cedulas = new string[1500]; // Creamos un arreglo con 1500 cédulas (más de mil)
 
-            // Llenamos el arreglo con números de cédula simulados (por ejemplo, del 1000 al 2499)
-            for (int i = 0; i < cantidadClientes; i++)
+            Random random = new Random();
+
+            // Generamos las cédulas aleatorias de 11 dígitos (sin guiones)
+            for (int i = 0; i < cedulas.Length; i++)
             {
-                cedulas[i] = 1000 + i;
+                string cedula = "";
+                for (int j = 0; j < 11; j++)
+                {
+                    cedula += random.Next(0, 10).ToString(); // Agrega dígitos aleatorios del 0 al 9
+                }
+                cedulas[i] = cedula;
             }
 
-            // Se pide al usuario que ingrese la cédula a buscar
-            Console.Write("Ingrese el número de cédula a buscar: ");
-            int cedulaBuscada = int.Parse(Console.ReadLine());
+            // Pedimos al usuario que ingrese una cédula para buscar
+            Console.Write("Ingrese la cédula del cliente (11 dígitos, sin guiones): ");
+            string cedulaBuscada = Console.ReadLine();
 
-            bool encontrado = false; // Para saber si la cédula fue encontrada
+            bool encontrada = false; // Variable para saber si se encontró la cédula
 
-            // Simulamos búsqueda externa recorriendo el arreglo "por bloques"
-            int tamanoBloque = 100; // Cada bloque simula una lectura desde disco
-
-            for (int i = 0; i < cantidadClientes; i += tamanoBloque)
+            // Simulamos la búsqueda externa recorriendo todo el arreglo
+            // (ya que en la búsqueda externa normalmente se lee bloque por bloque desde disco)
+            for (int i = 0; i < cedulas.Length; i++)
             {
-                // Simulamos que cargamos un bloque desde el "disco"
-                int limite = Math.Min(i + tamanoBloque, cantidadClientes);
-
-                // Búsqueda secuencial dentro del bloque cargado
-                for (int j = i; j < limite; j++)
+                if (cedulas[i] == cedulaBuscada)
                 {
-                    if (cedulas[j] == cedulaBuscada)
-                    {
-                        encontrado = true;
-                        Console.WriteLine($"Cliente encontrado. La cédula {cedulaBuscada} está en la posición {j}.");
-                        break;
-                    }
+                    encontrada = true;
+                    Console.WriteLine($"Cliente encontrado. La cédula {cedulaBuscada} se encuentra en la posición {i}.");
+                    break;
                 }
 
-                // Si se encontró, detenemos la búsqueda (ya no seguimos leyendo más bloques)
-                if (encontrado)
-                    break;
+                // Esta línea simula una pequeña pausa para representar que la lectura es más lenta en disco
+                System.Threading.Thread.Sleep(1);
             }
 
-            // Si no se encontró la cédula, mostramos un mensaje
-            if (!encontrado)
+            // Si no se encontró, mostramos un mensaje indicando que no está registrado
+            if (!encontrada)
             {
-                Console.WriteLine($"No se encontró la cédula {cedulaBuscada} en el registro.");
+                Console.WriteLine($"La cédula {cedulaBuscada} no se encuentra registrada en el sistema.");
             }
 
-            Console.ReadKey();
+            // Esperamos que el usuario presione una tecla antes de cerrar
+            //Console.ReadKey();
         }
     }
 }
