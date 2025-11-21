@@ -53,6 +53,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_III", "Parte_III", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Verificar_existencia_de_un_cliente_en_registro_masivo", "Verificar_existencia_de_un_cliente_en_registro_masivo\Verificar_existencia_de_un_cliente_en_registro_masivo.csproj", "{5CCE95D5-CBA1-49CE-9D39-E81CE99E312A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pilas_y_Colas_Aplicados_a_Problemas_Reales", "Pilas_y_Colas_Aplicados_a_Problemas_Reales", "{886F694B-D4BA-4FCF-9F98-128DFBD1926D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PARTE_I–Pilas(Stacks)", "PARTE_I–Pilas(Stacks)", "{D95A12DF-BED6-44D5-B2F8-BAEA6AAF4F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navegación_en_un_navegador_web", "Navegación_en_un_navegador_web\Navegación_en_un_navegador_web.csproj", "{67E04802-F46F-453B-AACF-A22301475B4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PARTE_II–Colas(Queues)", "PARTE_II–Colas(Queues)", "{8C2501A2-B402-4E41-97F5-D670AB4C9FA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atención_de_clientes_en_un_banco", "Atención_de_clientes_en_un_banco\Atención_de_clientes_en_un_banco.csproj", "{856982CF-659D-419C-B92D-1C6E8F049F8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +125,14 @@ Global
 		{5CCE95D5-CBA1-49CE-9D39-E81CE99E312A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CCE95D5-CBA1-49CE-9D39-E81CE99E312A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CCE95D5-CBA1-49CE-9D39-E81CE99E312A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67E04802-F46F-453B-AACF-A22301475B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E04802-F46F-453B-AACF-A22301475B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E04802-F46F-453B-AACF-A22301475B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E04802-F46F-453B-AACF-A22301475B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856982CF-659D-419C-B92D-1C6E8F049F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856982CF-659D-419C-B92D-1C6E8F049F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856982CF-659D-419C-B92D-1C6E8F049F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856982CF-659D-419C-B92D-1C6E8F049F8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -137,6 +155,10 @@ Global
 		{0E657629-7030-47BE-B044-DDE09FE7DE59} = {2DCA9A68-73EA-4646-8AB3-B7509B113CDB}
 		{182179E8-1389-4D2E-898F-6B324194E157} = {A0F5756C-4E3D-4F6E-9018-259B600E2996}
 		{5CCE95D5-CBA1-49CE-9D39-E81CE99E312A} = {182179E8-1389-4D2E-898F-6B324194E157}
+		{D95A12DF-BED6-44D5-B2F8-BAEA6AAF4F08} = {886F694B-D4BA-4FCF-9F98-128DFBD1926D}
+		{67E04802-F46F-453B-AACF-A22301475B4F} = {D95A12DF-BED6-44D5-B2F8-BAEA6AAF4F08}
+		{8C2501A2-B402-4E41-97F5-D670AB4C9FA4} = {886F694B-D4BA-4FCF-9F98-128DFBD1926D}
+		{856982CF-659D-419C-B92D-1C6E8F049F8C} = {8C2501A2-B402-4E41-97F5-D670AB4C9FA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D1E0538-F6E9-4994-A6F8-363EDC584B2E}
